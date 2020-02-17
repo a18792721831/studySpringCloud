@@ -1,0 +1,8 @@
+my:
+  test: mytest
+  value: mytestvalue
+student:
+  name: xiaohu
+  age: 23
+  like: pingpang
+  sex: man

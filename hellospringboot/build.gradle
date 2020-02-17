@@ -10,7 +10,15 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-    mavenCentral()
+    maven{
+        url 'https://maven.aliyun.com/'
+    }
+    maven{
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    maven{
+        url 'https://repo1.maven.org/maven2/'
+    }
 }
 
 dependencies {
@@ -19,6 +27,8 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    providedCompile 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-configuration-processor'
 }
 
 test {

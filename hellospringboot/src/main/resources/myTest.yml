@@ -1,0 +1,15 @@
+people1:
+  man1:
+    name: man
+    age: 22
+    value: man and age is 22
+  woman1:
+    name: woman
+    age: 32
+    value: woman and age is 32
+    like: music
+  child1:
+    name: child
+    age: 8
+    value: child and age is 8
+    school: high school
