@@ -13,3 +13,6 @@ spring boot 运行时监控actuator的创建，配置，已经简单使用.
 ## 4.[spring boot 整合JPA](https://blog.csdn.net/a18792721831/article/details/104380311)
 spring boot 整合JPA，创建，集成。jpa的使用，Dao,Service,Controller编写，以及测试类的编写.  
 ![alt spring boot 整合JPA](images/spring%20boot%20整合JPA.jpg)
+## 5.[spring boot整合Redis](https://blog.csdn.net/a18792721831/article/details/104399126)
+spring boot整合Redis，创建、docker启动redis，创建dao以及测试dao等等。  
+[!alt spring boot整合Redis](images/spring%20boot整合Redis.jpg)
