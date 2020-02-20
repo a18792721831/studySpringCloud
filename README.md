@@ -16,3 +16,7 @@ spring boot 整合JPA，创建，集成。jpa的使用，Dao,Service,Controller�
 ## 5.[spring boot整合Redis](https://blog.csdn.net/a18792721831/article/details/104399126)
 spring boot整合Redis，创建、docker启动redis，创建dao以及测试dao等等。  
 ![alt spring boot整合Redis](images/spring%20boot整合Redis.jpg)
+## 6.[spring boot 整合 swagger](https://blog.csdn.net/a18792721831/article/details/104399638)
+spring boot 整合 swagger Swagger，中文“拽”的意思，它是一个功能强大的在线 API文档的框架，目前它的版本
+为2.x，所以称为 Swagger2。Swagger2提供了在线文档的查阅和测试功能。利用 Swagger2很容易构建RESTful 风格的API，在Spring Boot 中集成 Swagger2。  
+![alt spring boot 整合 swagger](images/spring%20boot%20整合%20swagger.jpg)
