@@ -7,7 +7,7 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
-repositories {
+this.subprojects {
     maven{
         url 'https://maven.aliyun.com/'
     }
@@ -20,6 +20,9 @@ repositories {
     mavenCentral()
 }
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
 }

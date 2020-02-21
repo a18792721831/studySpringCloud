@@ -10,18 +10,35 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
+    maven{
+        url 'https://maven.aliyun.com/'
+    }
+    maven{
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    maven{
+        url 'https://repo1.maven.org/maven2/'
+    }
     mavenCentral()
+}
+
+ext {
+    set('springCloudVersion', "Hoxton.SR1")
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework.boot:spring-boot-configuration-processor'
-    providedCompile 'org.projectlombok:lombok'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
 }
 
 test {
