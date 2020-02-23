@@ -23,3 +23,6 @@ spring boot 整合 swagger Swagger，中文“拽”的意思，它是一个功�
 ## 7.[springboot集成Eureka服务注册与发现](https://blog.csdn.net/a18792721831/article/details/104444686)
 springboot集成Eureka服务注册与发现,以及eureka server,eureka client的入门。  
 ![alt springboot集成Eureka服务注册与发现](images/springboot集成Eureka服务注册与发现.png)
+## 8.[Eureka源码解析](https://blog.csdn.net/a18792721831/article/details/104458740)
+Eureka源码解析，基本操作，主要方法的源码分析；自我保护机制，Eureka Server的集群化。  
+![alt Eureka源码解析](images/Eureka源码解析.png)
