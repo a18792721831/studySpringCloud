@@ -30,3 +30,8 @@ Eureka源码解析，基本操作，主要方法的源码分析；自我保护�
 spring boot 负载均衡Ribbon,原理解析，整合RestTemplate实现Eureka Client 服务消费者。  
 Ribbon核心LoadBanlancerClient代码解析。  
 ![alt spring boot 负载均衡Ribbon](images/spring%20boot%20负载均衡Ribbon.jpg)  
+## 10.[Ribbon源码解析](https://blog.csdn.net/a18792721831/article/details/104503637)
+Ribbon源码解析,了解LoadBalancerClient、BaseLoadBalancer、DynamicServerListLoadBalancer的实现。  
+以及IRule、IPing如何实现负载均衡的策略，如何检测负载均衡的服务可用。  
+最后分析Ribbon和Eureka是如何结合的，如何用拦截器实现配置。
+![alt Ribbon源码解析](images/Ribbon源码解析.png)  
