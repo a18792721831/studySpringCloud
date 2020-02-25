@@ -25,4 +25,4 @@ spring:
     template-loader-path: classpath:/templates/
     prefer-file-system-access: false
   application:
-    name: eureka-client-test
+    name: eureka-client

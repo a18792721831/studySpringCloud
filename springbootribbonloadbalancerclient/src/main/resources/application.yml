@@ -1,16 +1,16 @@
+test:
+  host: http://127.0.0.1
+
 server:
-  port: 8763
+  port: 8989
+
 
 eureka:
-  instance:
-    hostname: localhost
   client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://127.0.0.1:8761/eureka/
-  server:
-    enable-self-preservation: false
+        register-with-eureka: false
+        fetch-registry: false
+#    service-url:
+#      defaultZone: http://127.0.0.1:8761/eureka/
 
 logging:
   level:
@@ -22,10 +22,16 @@ logging:
               method:
                 annotation:
                   RequestMappingHandlerMapping: trace
-
 spring:
   freemarker:
     template-loader-path: classpath:/templates/
     prefer-file-system-access: false
   application:
-    name: eureka-server-01
+    name: eureka-client-ribbonp-loadBalancer
+
+ribbon:
+  eureka:
+    enabled: false
+stores:
+  ribbon:
+    listOfServers: baidu.com,google.com

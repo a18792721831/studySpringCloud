@@ -26,3 +26,7 @@ springboot集成Eureka服务注册与发现,以及eureka server,eureka client的
 ## 8.[Eureka源码解析](https://blog.csdn.net/a18792721831/article/details/104458740)
 Eureka源码解析，基本操作，主要方法的源码分析；自我保护机制，Eureka Server的集群化。  
 ![alt Eureka源码解析](images/Eureka源码解析.png)
+## 9.[spring boot 负载均衡Ribbon](https://blog.csdn.net/a18792721831/article/details/104482835)
+spring boot 负载均衡Ribbon,原理解析，整合RestTemplate实现Eureka Client 服务消费者。  
+Ribbon核心LoadBanlancerClient代码解析。  
+！[alt spring boot 负载均衡Ribbon](images/spring%20boot%20负载均衡Ribbon.jpg)  
