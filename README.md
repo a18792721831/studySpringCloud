@@ -35,3 +35,7 @@ Ribbon源码解析,了解LoadBalancerClient、BaseLoadBalancer、DynamicServerLi
 以及IRule、IPing如何实现负载均衡的策略，如何检测负载均衡的服务可用。  
 最后分析Ribbon和Eureka是如何结合的，如何用拦截器实现配置。
 ![alt Ribbon源码解析](images/Ribbon源码解析.png)  
+## 11.[springboot负载均衡Feign](https://blog.csdn.net/a18792721831/article/details/104523325)
+springboot负载均衡Feign，如何创建Feign，将Feign定位为Dao或者Service。  
+以及Feign和Ribbon的关系、FeignClient以及FeignClient默认配置。  
+![alt springboot负载均衡Feign](images/springboot负载均衡Feign.png)  

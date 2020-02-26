@@ -1,5 +1,5 @@
 server:
-  port: 8764
+  port: 8000
 
 eureka:
   client:
@@ -25,4 +25,4 @@ spring:
     template-loader-path: classpath:/templates/
     prefer-file-system-access: false
   application:
-    name: eureka-client
+    name: feign-client
