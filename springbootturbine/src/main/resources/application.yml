@@ -1,0 +1,33 @@
+server:
+  port: 8005
+
+eureka:
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestMappingHandlerMapping: trace
+
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  application:
+    name: eureka-turbine-client
+turbine:
+  aggregator:
+    cluster-config: default # 定义集群名字
+  app-config: hystrix-dashboard-client, hystrix-dashboard-feign-client # 监控哪些服务
+  cluster-name-expression: new String("default") # 选择集群名字

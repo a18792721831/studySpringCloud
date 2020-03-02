@@ -42,3 +42,7 @@ springboot负载均衡Feign，如何创建Feign，将Feign定位为Dao或者Serv
 ## 12.[Feign源码分析](https://blog.csdn.net/a18792721831/article/details/104542555)
 Feign源码分析,解析Feign工作原理，Feign与HttpUrlConnection，Feign与HttpClient，Feign与OkHttp.以及Feign如何协同Ribbon实现负载均衡。  
 ![alt Feign源码分析](images/Feign源码分析.png)  
+## 13.[spring boot集成Hystrix](https://blog.csdn.net/a18792721831/article/details/104595872)
+spring boot集成Hystrix,包含hystrix与RestTemplate、hystrix与Feign、Hystrix Dashboard 与 RestTemplate 、Hystrix Dashboard 与 Feign、以及RestTemplate与Feign的对比、以及集成Turbine.  
+![alt spring boot集成Hystrix_1](images/spring%20boot集成Hystrix_1.png)  
+![alt spring boot集成Hystrix_2](images/spring%20boot集成Hystrix_2.png)  
