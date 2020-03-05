@@ -1,0 +1,58 @@
+server:
+  port: 8006
+
+eureka:
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestMappingHandlerMapping: trace
+
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  application:
+    name: zuul-client
+
+
+zuul:
+  host:
+    connect-timeout-millis: 15000 #HTTP连接超时要比Hystrix的大
+    socket-timeout-millis: 60000   #socket超时
+  routes:
+    rest:
+      path: /restapi/** # 直连eureka-client服务提供者
+      serviceId: eureka-client # eureka-client服务提供者服务名称
+    ribbon:
+      path: /ribbonapi/** # 通过ribbon负载均衡后连接到eureka-client服务提供者
+      serviceId: ribbon-client # ribbon 负载均衡服务名称
+    feign:
+      path: /feignapi/** # 通过 feign 请求后连接到eureka-client服务提供者
+      serviceId: feign-client # feign 请求服务名称
+    client-8762:
+      path: /client-8762/** # 指定 eureka-client服务提供者
+      url: http://127.0.0.1:8762 # 8762端口的eureka-client服务提供者的url地址
+      # url地址不支持熔断处理
+#      path: /myribbon/** # 通过自定义的转发列表实现负载均衡
+#      serviceId: myribbonlist # 负载均衡只能调用这里配置的服务
+#
+#ribbon:
+#  eureka:
+#    enabled: false
+#
+#myribbonlist:
+#  ribbon:
+#    listOfServers: http://127.0.0.1:8764
+  prefix: /v1 # 设置api版本号，访问格式 http://127.0.0.1:8006/v1/feign/.....

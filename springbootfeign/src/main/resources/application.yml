@@ -26,3 +26,6 @@ spring:
     prefer-file-system-access: false
   application:
     name: feign-client
+feign:
+  hystrix:
+    enabled: false

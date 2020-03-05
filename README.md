@@ -46,3 +46,9 @@ Feign源码分析,解析Feign工作原理，Feign与HttpUrlConnection，Feign与
 spring boot集成Hystrix,包含hystrix与RestTemplate、hystrix与Feign、Hystrix Dashboard 与 RestTemplate 、Hystrix Dashboard 与 Feign、以及RestTemplate与Feign的对比、以及集成Turbine.  
 ![alt spring boot集成Hystrix_1](images/spring%20boot集成Hystrix_1.png)  
 ![alt spring boot集成Hystrix_2](images/spring%20boot集成Hystrix_2.png)  
+## 14.[Zuul 熔断功能不支持配置路由url](https://blog.csdn.net/a18792721831/article/details/104655867)
+Zuul 熔断功能不支持配置路由url.  
+![alt Zuul 熔断功能不支持配置路由url](images/Zuul%20熔断功能不支持配置路由url.png)  
+## 15.[spring boot 集成Zuul](https://blog.csdn.net/a18792721831/article/details/104635350)
+spring boot 集成Zuul,包括Zuul创建,集成,以及自定义转发列表,熔断器,过滤器等。    
+![alt spring boot 集成Zuul](images/spring%20boot%20集成Zuul.png)  
