@@ -1,0 +1,23 @@
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestMappingHandlerMapping: trace
+
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  application:
+    name: config-client
+  cloud:
+    config:
+      uri: http://127.0.0.1:8010 # config server的url地址
+      fail-fast: true
+  profiles:
+    active: dev # {spring.application.name}-{spring.profiles.active}就是config server中portconfig中文件的名字

@@ -52,3 +52,6 @@ Zuul 熔断功能不支持配置路由url.
 ## 15.[spring boot 集成Zuul](https://blog.csdn.net/a18792721831/article/details/104635350)
 spring boot 集成Zuul,包括Zuul创建,集成,以及自定义转发列表,熔断器,过滤器等。    
 ![alt spring boot 集成Zuul](images/spring%20boot%20集成Zuul.png)  
+## 16.[spring boot 集成config](https://blog.csdn.net/a18792721831/article/details/104716562)
+spring boot 集成config,config server 和 config client的创建，使用，以及config server读取本地、远程配置，和 config的集群化。  
+![alt spring boot 集成config](images/spring%20boot%20集成config.png)  

@@ -1,0 +1,45 @@
+server:
+  port: 8011
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestMappingHandlerMapping: trace
+
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  application:
+    name: config-eureka-server
+#  profiles:
+#    active: native
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: classpath:/portconfig/
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/a18792721831/studySpringCloud # 仓库跟地址
+          search-paths: springbootconfigserver/src/main/resources/portconfig # 以studySpringCloud为根路径进行搜索的文件夹地址
+          username: a18792721831 # 用户名
+          password: # 公有仓库可以不写密码
+          timeout: 60
+      label: master # 指定分支
+eureka:
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+  service-url:
+    defaultZone: http://127.0.0.1:8761/eureka/
