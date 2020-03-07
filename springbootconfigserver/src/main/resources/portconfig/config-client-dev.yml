@@ -1,0 +1,3 @@
+server:
+  port: 8011
+message: config client version 1.
