@@ -1,0 +1,26 @@
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestMappingHandlerMapping: trace
+
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  rabbitmq:
+    host: 10.0.228.93
+    port: 30672
+    username: guest
+    password: guest
+management:
+  security:
+    enabled: false
+
+server:
+  port: 8016

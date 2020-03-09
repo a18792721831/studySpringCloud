@@ -55,3 +55,6 @@ spring boot 集成Zuul,包括Zuul创建,集成,以及自定义转发列表,熔�
 ## 16.[spring boot 集成config](https://blog.csdn.net/a18792721831/article/details/104716562)
 spring boot 集成config,config server 和 config client的创建，使用，以及config server读取本地、远程配置，和 config的集群化。  
 ![alt spring boot 集成config](images/spring%20boot%20集成config.png)  
+## 17.[spring boot config 集成rabbitmq实现总线bus实时刷新配置](https://blog.csdn.net/a18792721831/article/details/104737243)
+spring boot config 集成rabbitmq实现总线bus实时刷新配置,sping boot config bus server 的创建，验证与触发实时刷新;以及spring boot config bus client的创建，验证，实时刷新后客户端访问验证。  
+![alt spring boot config 集成rabbitmq实现总线bus实时刷新配置](images/spring%20boot%20config%20集成rabbitmq实现总线bus实时刷新配置.png)  

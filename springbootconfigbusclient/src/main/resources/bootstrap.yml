@@ -1,0 +1,22 @@
+eureka:
+  client:
+    #    register-with-eureka: false
+    #    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    eureka-server-connect-timeout-seconds: 60
+    eureka-server-read-timeout-seconds: 60
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: config-client # 这里的服务名称一定与配置文件的名字相同
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: config-eureka-server
+  profiles:
+    active: dev # ${spring.application.name}-{spring.profiles.active}就是读取的配置文件的名字
