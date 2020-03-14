@@ -1,0 +1,38 @@
+server:
+  port: 8101
+
+eureka:
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestMappingHandlerMapping: trace
+
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  application:
+    name: gateway-service
+  zipkin:
+    base-url: http://10.0.251.180:9411/
+  sleuth:
+    sampler:
+      percentage: 1.0
+zuul:
+  routes:
+    user-api:
+      path: /user-service/**
+      serviceId: ZIPKIN-CLIENT-USER-SERVICE

@@ -58,3 +58,8 @@ spring boot 集成config,config server 和 config client的创建，使用，以
 ## 17.[spring boot config 集成rabbitmq实现总线bus实时刷新配置](https://blog.csdn.net/a18792721831/article/details/104737243)
 spring boot config 集成rabbitmq实现总线bus实时刷新配置,sping boot config bus server 的创建，验证与触发实时刷新;以及spring boot config bus client的创建，验证，实时刷新后客户端访问验证。  
 ![alt spring boot config 集成rabbitmq实现总线bus实时刷新配置](images/spring%20boot%20config%20集成rabbitmq实现总线bus实时刷新配置.png)  
+## 18.[spring boot 集成sleuth](https://blog.csdn.net/a18792721831/article/details/104825746)
+spring boot 集成sleuth.包含 zipkin server的介绍，zipkin server在docker 环境下的启动，zipkin集成rabbit mq;zipkin 集成elasticsearch以及使用kibana展示链路数据。  
+![alt spring boot 集成sleuth_1](images/spring%20boot%20集成sleuth_1.png)  
+![alt spring boot 集成sleuth_2](images/spring%20boot%20集成sleuth_2.png)  
+
