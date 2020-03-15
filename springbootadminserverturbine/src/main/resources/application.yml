@@ -1,5 +1,5 @@
 server:
-  port: 8762
+  port: 8313
 
 eureka:
   client:
@@ -19,10 +19,22 @@ logging:
               method:
                 annotation:
                   RequestMappingHandlerMapping: trace
+  file: logs/spring-boot-admin-server-turbine.log
 
 spring:
   freemarker:
     template-loader-path: classpath:/templates/
     prefer-file-system-access: false
   application:
-    name: eureka-client
+    name: admin-server-turbine
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      turbine:
+        clusters: default
+        location: admin-client-turbine

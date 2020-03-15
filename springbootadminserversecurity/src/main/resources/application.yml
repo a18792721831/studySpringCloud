@@ -1,0 +1,47 @@
+server:
+  port: 8321
+
+eureka:
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    metadata-map:
+      user.name: ${admin.login.user.name}
+      user.password: ${admin.login.user.pswd}
+
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestMappingHandlerMapping: trace
+  file: logs/spring-boot-admin-server.log
+
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  application:
+    name: admin-server
+  boot:
+    admin:
+      client:
+        username: ${admin.login.user.name}
+        password: ${admin.login.user.pswd}
+        instance:
+          metadata:
+            user.name: ${admin.login.user.name}
+            user.password: ${admin.login.user.pswd}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

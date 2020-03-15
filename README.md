@@ -62,4 +62,7 @@ spring boot config 集成rabbitmq实现总线bus实时刷新配置,sping boot co
 spring boot 集成sleuth.包含 zipkin server的介绍，zipkin server在docker 环境下的启动，zipkin集成rabbit mq;zipkin 集成elasticsearch以及使用kibana展示链路数据。  
 ![alt spring boot 集成sleuth_1](images/spring%20boot%20集成sleuth_1.png)  
 ![alt spring boot 集成sleuth_2](images/spring%20boot%20集成sleuth_2.png)  
-
+## 19.[spring boot集成 Admin](https://blog.csdn.net/a18792721831/article/details/104862831)
+spring boot集成 Admin,包括admin server、client的创建与配置;admin 集成 hystrix 熔断器; admin 的安全管理，自定义设置用户名密码等。  
+![alt spring boot集成 Admin_1](images/spring%20boot集成%20Admin_1.png)  
+![alt spring boot集成 Admin_2](images/spring%20boot集成%20Admin_2.png)  
