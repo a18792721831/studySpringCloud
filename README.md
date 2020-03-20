@@ -66,3 +66,6 @@ spring boot 集成sleuth.包含 zipkin server的介绍，zipkin server在docker 
 spring boot集成 Admin,包括admin server、client的创建与配置;admin 集成 hystrix 熔断器; admin 的安全管理，自定义设置用户名密码等。  
 ![alt spring boot集成 Admin_1](images/spring%20boot集成%20Admin_1.png)  
 ![alt spring boot集成 Admin_2](images/spring%20boot集成%20Admin_2.png)  
+## 20.[spring boot集成security](https://blog.csdn.net/a18792721831/article/details/104974151)
+spring boot集成security,包含security的入门使用,以及security的方法保护,最后使用案例集成了jpa与oracle.  
+![alt spring boot集成security](images/spring%20boot集成security.png)  
