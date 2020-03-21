@@ -69,3 +69,6 @@ spring boot集成 Admin,包括admin server、client的创建与配置;admin 集�
 ## 20.[spring boot集成security](https://blog.csdn.net/a18792721831/article/details/104974151)
 spring boot集成security,包含security的入门使用,以及security的方法保护,最后使用案例集成了jpa与oracle.  
 ![alt spring boot集成security](images/spring%20boot集成security.png)  
+## 21.[spring cloud OAuth2](https://blog.csdn.net/a18792721831/article/details/105006679)
+spring cloud OAuth2的原理，以及OAuth2 5.2.x的变动。  
+![alt spring cloud OAuth2](images/spring%20cloud%20OAuth2.png)  
