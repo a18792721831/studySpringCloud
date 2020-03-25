@@ -1,0 +1,36 @@
+server:
+  port: 8602
+
+eureka:
+  client:
+  service-url:
+    defaultZone: http://127.0.0.1:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+spring:
+  rabbitmq:
+    host: 10.0.228.93
+    port: 30672
+    username: guest
+    password: guest
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  application:
+    name: service-config
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestMappingHandlerMapping: trace
