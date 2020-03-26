@@ -1,7 +1,7 @@
 users:
   zipkin:
     hostname: 10.0.251.180
-    port: 9411
+    port: 9412
 
 spring:
   zipkin:
