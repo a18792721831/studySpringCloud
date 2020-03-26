@@ -1,0 +1,13 @@
+users:
+  rabbitmq:
+    hostname: 10.0.228.93
+    port: 30672
+    username: guest
+    password: guest
+
+spring:
+  rabbitmq:
+    host: ${users.rabbitmq.hostname}
+    port: ${users.rabbitmq.port}
+    username: ${users.rabbitmq.username}
+    password: ${users.rabbitmq.password}
