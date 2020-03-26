@@ -24,8 +24,6 @@ spring:
   freemarker:
     template-loader-path: classpath:/templates/
     prefer-file-system-access: false
-  application:
-    name: service-config
 
 logging:
   level:

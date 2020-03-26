@@ -1,0 +1,10 @@
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

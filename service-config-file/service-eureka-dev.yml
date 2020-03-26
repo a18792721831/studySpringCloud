@@ -1,0 +1,9 @@
+users:
+  eureka:
+    hostname: 127.0.0.1
+    port: 8601
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${users.eureka.hostname}:${users.eureka.port}/eureka/
