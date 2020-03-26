@@ -1,0 +1,11 @@
+users:
+  zipkin:
+    hostname: 10.0.251.180
+    port: 9411
+
+spring:
+  zipkin:
+    base-url: http://${users.zipkin.hostname}:${users.zipkin.port}/
+  sleuth:
+    sampler:
+      percentage: 1.0
