@@ -1,2 +1,8 @@
 server:
   port: 8604
+
+zuul:
+  routes:
+    service-user:
+      path: /service-user/**
+      serviceId: *
