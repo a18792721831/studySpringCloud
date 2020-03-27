@@ -4,5 +4,5 @@ server:
 turbine:
   aggregator:
     cluster-config: default
-  app-config: '*'
+#  app-config: '*'
   cluster-name-expression: new String("default")
