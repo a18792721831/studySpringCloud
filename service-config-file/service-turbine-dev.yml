@@ -1,0 +1,8 @@
+server:
+  port: 8605
+
+turbine:
+  aggregator:
+    cluster-config: default
+  app-config: '*'
+  cluster-name-expression: new String("default")
