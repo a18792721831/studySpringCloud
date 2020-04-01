@@ -1,3 +1,8 @@
+users:
+  admin:
+    hostname: 127.0.0.1
+    port: 8603
+
 spring:
   freemarker:
     template-loader-path: classpath:/templates/
@@ -5,6 +10,11 @@ spring:
   cloud:
     inetutils:
       timeout-seconds: 60
+  boot:
+    admin:
+      client:
+        instance:
+          service-url: http://${users.admin.hostname}:${users.admin.port}
 
 management:
   endpoints:
