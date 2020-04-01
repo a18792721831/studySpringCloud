@@ -1,8 +1,11 @@
 server:
   port: 8604
 
-#zuul:
-#  routes:
-#    service-user:
-#      path: /service-user/**
-#      serviceId: *
+zuul:
+  routes:
+    service-subscriber:
+      path: /service-subscriber/**
+      serviceId: service-subscriber
+    service-customer:
+      path: /service-customer/**
+      serviceId: service-customer
