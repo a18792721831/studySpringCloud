@@ -5,7 +5,17 @@ users:
 
 spring:
   zipkin:
-    base-url: http://${users.zipkin.hostname}:${users.zipkin.port}/
+#    base-url: http://${users.zipkin.hostname}:${users.zipkin.port}/
+    rabbitmq:
+      addresses: 10.0.228.93:30672
+      queue: zipkin
+      sender:
+        type: rabbit
+    compression:
+      enabled: true
+    locator:
+      discovery:
+        enabled: true
   sleuth:
     sampler:
       percentage: 1.0
