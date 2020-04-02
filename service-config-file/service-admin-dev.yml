@@ -7,6 +7,7 @@ spring:
       context-path: / # server端的访问路径
       monitor:
         status-lifetime: 60000 #client端生命周期
-        timeout: 60000 # 查询client的超时时间
+        default-timeout: 60000 #默认超时时间
+#        timeout: 60000 # 查询client的超时时间
       ui:
         title: 'a18792721831 的 admin dashboard'
