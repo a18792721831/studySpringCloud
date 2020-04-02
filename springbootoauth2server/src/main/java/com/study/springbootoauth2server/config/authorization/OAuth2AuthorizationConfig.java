@@ -26,7 +26,7 @@ public class OAuth2AuthorizationConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     @Bean
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication().dataSource(dataSource)
                 .withDefaultSchema();
     }

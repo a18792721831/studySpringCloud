@@ -18,15 +18,15 @@ public class Role implements GrantedAuthority {
     @Column(nullable = false)
     private String name;
 
-    public void setId(Long id){
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Long getId(){
+    public Long getId() {
         return id;
     }
 
-    public void setAuthority(String name){
+    public void setAuthority(String name) {
         this.name = name;
     }
 
@@ -36,7 +36,7 @@ public class Role implements GrantedAuthority {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return name;
     }
 }

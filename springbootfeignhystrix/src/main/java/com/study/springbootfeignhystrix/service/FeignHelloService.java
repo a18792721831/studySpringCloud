@@ -14,7 +14,7 @@ public class FeignHelloService {
     @Autowired
     private FeignHelloDao feignHelloDao;
 
-    public String hello(String name){
+    public String hello(String name) {
         return feignHelloDao.hello(name);
     }
 

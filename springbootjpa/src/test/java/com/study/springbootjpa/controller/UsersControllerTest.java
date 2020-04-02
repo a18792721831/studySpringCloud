@@ -15,22 +15,22 @@ import java.util.logging.Logger;
  * @author jiayq
  * @Date 2020-02-18
  */
-public class UsersControllerTest extends AbstractTest{
+public class UsersControllerTest extends AbstractTest {
 
     @BeforeAll
-    public static void init(){
+    public static void init() {
         AbstractTest.init();
         logger = Logger.getLogger(UsersControllerTest.class.getName());
     }
 
     @BeforeEach
-    public void beforeTest(){
+    public void beforeTest() {
         super.beforeTest();
         url += "/user";
     }
 
     @Test
-    public void testGetUsersByUserName(){
+    public void testGetUsersByUserName() {
         ResponseEntity<List> responseEntity = testRestTemplate.getForEntity(
                 url + "/4533422708069791629", List.class);
         logger.warning(url + "/4533422708069791629 testgetUsersByUserName " + responseEntity);
@@ -43,6 +43,6 @@ public class UsersControllerTest extends AbstractTest{
         users.setStatus(Status.VALID);
         users.setPassword("123456");
         testRestTemplate.put(url + "/", users);
-        logger.warning(url+"/ testAddUser " + users);
+        logger.warning(url + "/ testAddUser " + users);
     }
 }

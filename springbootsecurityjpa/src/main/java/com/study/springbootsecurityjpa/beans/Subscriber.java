@@ -32,7 +32,7 @@ public class Subscriber implements UserDetails, Serializable {
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "subscriber_role", joinColumns = @JoinColumn(name = "subscriber_id", referencedColumnName = "id"),
-    inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
     /*
      * 这个JoinTable的大概含义是：
      * 这个中间关系由关系表维护，表名是 user_role
@@ -41,15 +41,15 @@ public class Subscriber implements UserDetails, Serializable {
      */
     private List<Role> authorities;
 
-    public Subscriber(){
+    public Subscriber() {
 
     }
 
-    public Long getId(){
+    public Long getId() {
         return id;
     }
 
-    public void setId(Long id){
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -58,7 +58,7 @@ public class Subscriber implements UserDetails, Serializable {
         return authorities;
     }
 
-    public void setAuthorities(List<Role> authorities){
+    public void setAuthorities(List<Role> authorities) {
         this.authorities = authorities;
     }
 
@@ -67,7 +67,7 @@ public class Subscriber implements UserDetails, Serializable {
         return "{noop}" + password;
     }
 
-    public void setPassword(String password){
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -76,7 +76,7 @@ public class Subscriber implements UserDetails, Serializable {
         return username;
     }
 
-    public void setUsername(String username){
+    public void setUsername(String username) {
         this.username = username;
     }
 

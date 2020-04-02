@@ -3,8 +3,8 @@ server:
 
 eureka:
   client:
-#    register-with-eureka: false
-#    fetch-registry: false
+    #    register-with-eureka: false
+    #    fetch-registry: false
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka/
 
@@ -26,12 +26,14 @@ spring:
     prefer-file-system-access: false
   application:
     name: zipkin-client-user-service
-#  zipkin:
-#    base-url: http://10.0.251.180:9411/
+  #  zipkin:
+  #    base-url: http://10.0.251.180:9411/
   sleuth:
     sampler:
       percentage: 1.0
   zipkin:
+    compression:
+      enabled: true
     rabbitmq:
       addresses: 10.0.228.93:30672
       queue: zipkin
@@ -47,3 +49,6 @@ spring:
         index-shards: 3
         index-relicas: 1
         hosts: 10.0.251.180:9200
+    locator:
+      discovery:
+        enabled: true

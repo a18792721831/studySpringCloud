@@ -20,22 +20,22 @@ public class PeopleController {
     private People people;
 
     @RequestMapping("")
-    public People readPeople(){
+    public People readPeople() {
         return people;
     }
 
     @RequestMapping("/man")
-    public Man readMan(){
+    public Man readMan() {
         return people.getMan();
     }
 
     @RequestMapping("/woman")
-    public Woman readWoman(){
+    public Woman readWoman() {
         return people.getWoman();
     }
 
     @RequestMapping("/child")
-    public Child readChild(){
+    public Child readChild() {
         return people.getChild();
     }
 }

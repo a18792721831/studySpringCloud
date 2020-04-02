@@ -22,16 +22,16 @@ public class StudentDaoTest {
     private StudentDao studentDao;
 
     @Test
-    public void testAddStudent(){
+    public void testAddStudent() {
         Student student = new Student("小花", "足球", Grade.ONE);
         studentDao.save(student);
         logger.warning("test add dao success " + student.toString());
     }
 
     @Test
-    public void testFindByStudentId(){
+    public void testFindByStudentId() {
         Optional<Student> student = studentDao.findById(8L);
-        if (student.isPresent()){
+        if (student.isPresent()) {
             logger.warning("test find by student id success " + student.toString());
         } else {
             throw new AssertionError("null data");

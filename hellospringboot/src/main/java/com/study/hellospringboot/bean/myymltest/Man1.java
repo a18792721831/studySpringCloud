@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ConfigurationProperties(prefix = "people1.man1")
-@PropertySource(factory = YmlPropertySourceFactory.class,value = "classpath:myTest.yml")
+@PropertySource(factory = YmlPropertySourceFactory.class, value = "classpath:myTest.yml")
 public class Man1 extends AbPeople {
     public Man1() {
     }

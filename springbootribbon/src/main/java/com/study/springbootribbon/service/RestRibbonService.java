@@ -18,11 +18,11 @@ public class RestRibbonService {
     @Autowired
     private RestTemplate restTemplate;
 
-    public String restHi(String name){
+    public String restHi(String name) {
         return restTemplate.getForObject("http://" + eurekaClient + "/hello/hi/" + name, String.class);
     }
 
-    public String restHello(String name){
+    public String restHello(String name) {
         return restTemplate.getForObject("http://" + eurekaClient + "/hello/hello/" + name, String.class);
     }
 }

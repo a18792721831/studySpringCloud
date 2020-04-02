@@ -18,7 +18,7 @@ public class HiController {
     private int port;
 
     @GetMapping("/hi/{name}")
-    public String hi(@PathVariable("name") String name){
+    public String hi(@PathVariable("name") String name) {
         return "hi " + name + " , i am from spring boot admin client service, port is " + port;
     }
 }

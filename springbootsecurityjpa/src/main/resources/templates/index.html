@@ -9,20 +9,20 @@
     <link rel="stylesheet" href="css/main.css" th:href="@{/static/css/main.css}"/>
 </head>
 <body>
-    <h1>Hello Spring Boot Security for index</h1>
-    <p>这个界面没有受到保护.</p>
-    <div th:fragment="logout" sec:authorize="isAuthenticated()">
-        登录用户:<span sec:authentication="name"/>
-        用户角色:<span sec:authentication="principal.authorities"/>
-        <div>
-            <form action="#" th:action="@{/logout}" method="post">
-                <input type="submit" value="登出" />
-            </form>
-        </div>
+<h1>Hello Spring Boot Security for index</h1>
+<p>这个界面没有受到保护.</p>
+<div th:fragment="logout" sec:authorize="isAuthenticated()">
+    登录用户:<span sec:authentication="name"/>
+    用户角色:<span sec:authentication="principal.authorities"/>
+    <div>
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" value="登出"/>
+        </form>
     </div>
-    <ul>
-        <li>点击<a href="/user/index" th:href="@{/user/index}">去/user/index被保护的界面</a> </li>
-        <li>点击<a href="/admin/index" th:href="@{/admin/index}">去/admin/index被保护的界面</a> </li>
-    </ul>
+</div>
+<ul>
+    <li>点击<a href="/user/index" th:href="@{/user/index}">去/user/index被保护的界面</a></li>
+    <li>点击<a href="/admin/index" th:href="@{/admin/index}">去/admin/index被保护的界面</a></li>
+</ul>
 </body>
 </html>

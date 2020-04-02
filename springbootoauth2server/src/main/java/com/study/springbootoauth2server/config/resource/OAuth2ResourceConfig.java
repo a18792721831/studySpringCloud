@@ -30,7 +30,7 @@ public class OAuth2ResourceConfig extends WebSecurityConfigurerAdapter {
         http.oauth2ResourceServer()
                 .opaqueToken()
                 .introspectionUri(introspectionUri)
-                .introspectionClientCredentials("browser","")
+                .introspectionClientCredentials("browser", "")
                 .introspectionClientCredentials("service-resource", "123456");
     }
 

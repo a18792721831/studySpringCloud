@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class HystrixDashboardConfig {
 
     @Bean
-    ServletRegistrationBean getServlet(){
+    ServletRegistrationBean getServlet() {
         HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
         ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
         registrationBean.setLoadOnStartup(1);

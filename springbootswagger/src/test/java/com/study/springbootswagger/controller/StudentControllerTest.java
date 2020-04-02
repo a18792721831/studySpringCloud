@@ -17,27 +17,27 @@ import java.util.logging.Logger;
 public class StudentControllerTest extends AbstractTest {
 
     @BeforeAll
-    public static void init(){
+    public static void init() {
         AbstractTest.init();
         logger = Logger.getLogger(StudentControllerTest.class.getName());
     }
 
     @BeforeEach
     @Override
-    public void beforeTest(){
+    public void beforeTest() {
         super.beforeTest();
         url += "/stu";
     }
 
     @Test
-    public void testPutStudent(){
+    public void testPutStudent() {
         Student student = new Student("小李", "麻将", Grade.NO);
         logger.warning("test put student success" +
                 testRestTemplate.postForObject(url + "/", student, String.class));
     }
 
     @Test
-    public void testFindStudentById(){
+    public void testFindStudentById() {
         ResponseEntity<Student> responseEntity = testRestTemplate.getForEntity(
                 url + "/9", Student.class);
         logger.warning("test find student by id success student:" + responseEntity.toString());

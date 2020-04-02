@@ -17,7 +17,7 @@ public class FeignHelloController {
     private FeignHelloService feignHelloService;
 
     @GetMapping("/feign/hello/{name}")
-    public String helloFeign(@PathVariable("name") String name){
+    public String helloFeign(@PathVariable("name") String name) {
         return feignHelloService.hello(name);
     }
 

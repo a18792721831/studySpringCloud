@@ -18,13 +18,13 @@ spring:
     prefer-file-system-access: false
   application:
     name: config-eureka-server
-#  profiles:
-#    active: native
-#  cloud:
-#    config:
-#      server:
-#        native:
-#          search-locations: classpath:/portconfig/
+  #  profiles:
+  #    active: native
+  #  cloud:
+  #    config:
+  #      server:
+  #        native:
+  #          search-locations: classpath:/portconfig/
   profiles:
     active: git
   cloud:
@@ -39,7 +39,7 @@ spring:
       label: master # 指定分支
 eureka:
   client:
-#    register-with-eureka: false
-#    fetch-registry: false
+  #    register-with-eureka: false
+  #    fetch-registry: false
   service-url:
     defaultZone: http://127.0.0.1:8761/eureka/

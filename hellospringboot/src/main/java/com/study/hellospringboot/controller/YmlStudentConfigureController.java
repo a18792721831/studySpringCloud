@@ -17,7 +17,7 @@ public class YmlStudentConfigureController {
     private Student student;
 
     @RequestMapping("read")
-    public Student readStudent(){
+    public Student readStudent() {
         return student;
     }
 

@@ -44,7 +44,8 @@ public class YmlConfigureControllerTest {
         ResponseEntity<String> responseEntity = testRestTemplate.getForEntity(
                 baseUrl + ":" + port + "/configure//my.test", String.class);
         assertThat(responseEntity.getBody(), equalTo("mytest"));
-        logger.warning("hello test success");    }
+        logger.warning("hello test success");
+    }
 
     @Test
     public void testMyValue() {

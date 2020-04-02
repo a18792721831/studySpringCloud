@@ -18,13 +18,15 @@ spring:
     prefer-file-system-access: false
   application:
     name: config-server
-#  profiles:
-#    active: native
-#  cloud:
-#    config:
-#      server:
-#        native:
-#          search-locations: classpath:/portconfig/
+  profiles:
+    active: git
+  #  profiles:
+  #    active: native
+  #  cloud:
+  #    config:
+  #      server:
+  #        native:
+  #          search-locations: classpath:/portconfig/
   cloud:
     config:
       server:

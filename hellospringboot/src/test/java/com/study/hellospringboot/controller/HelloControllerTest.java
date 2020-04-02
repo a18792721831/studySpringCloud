@@ -43,7 +43,7 @@ public class HelloControllerTest {
     public void hello() {
         ResponseEntity<String> responseEntity = testRestTemplate.
                 getForEntity(baseUrl + port + "/hellocontroller/hello", String.class);
-        assertThat(responseEntity.getBody(),equalTo("hello, this is HelloController"));
+        assertThat(responseEntity.getBody(), equalTo("hello, this is HelloController"));
         logger.warning("hello test success");
     }
 }

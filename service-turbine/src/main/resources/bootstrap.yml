@@ -1,0 +1,16 @@
+users:
+  config:
+    hostname: 127.0.0.1
+    port: 8602
+
+spring:
+  application:
+    name: service-turbine
+  cloud:
+    config:
+      uri: http://${users.config.hostname}:${users.config.port}
+      fail-fast: true
+      name: ${spring.application.name},service-eureka,service-logging,service-public,service-rabbitmq
+      profile: ${spring.profiles.active}
+  profiles:
+    active: dev

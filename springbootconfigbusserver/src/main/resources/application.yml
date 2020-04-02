@@ -17,14 +17,14 @@ spring:
     template-loader-path: classpath:/templates/
     prefer-file-system-access: false
   application:
-    name: config-eureka-server
-#  profiles:
-#    active: native
-#  cloud:
-#    config:
-#      server:
-#        native:
-#          search-locations: classpath:/portconfig/
+    name: service-config
+  #  profiles:
+  #    active: native
+  #  cloud:
+  #    config:
+  #      server:
+  #        native:
+  #          search-locations: classpath:/portconfig/
   profiles:
     active: git
   cloud:
@@ -44,10 +44,8 @@ spring:
     password: guest
 eureka:
   client:
-#    register-with-eureka: false
-#    fetch-registry: false
   service-url:
-    defaultZone: http://127.0.0.1:8761/eureka/
+    defaultZone: http://127.0.0.1:8601/eureka/
 management:
   security:
     enabled: false

@@ -1,0 +1,33 @@
+server:
+  port: 8601
+
+eureka:
+  instance:
+    hostname: ${eureka.hostname}
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestMappingHandlerMapping: trace
+
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  application:
+    name: service-eureka
+  profiles:
+    active: dev

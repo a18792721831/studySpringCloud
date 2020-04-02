@@ -17,7 +17,7 @@ public class MessageController {
     private String message;
 
     @GetMapping("/read")
-    public String getMessage(){
+    public String getMessage() {
         return message;
     }
 

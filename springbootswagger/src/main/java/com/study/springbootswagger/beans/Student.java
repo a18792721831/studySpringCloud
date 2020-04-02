@@ -25,12 +25,12 @@ public class Student {
     private String name;
 
     @Column
-    @ApiModelProperty(value = "学生爱好",dataType = "String",required = false,notes = "学生爱好255")
+    @ApiModelProperty(value = "学生爱好", dataType = "String", required = false, notes = "学生爱好255")
     private String hobby;
 
     @Convert(converter = StudentConvert.class)
     @Column(nullable = false, name = "GRADE")
-    @ApiModelProperty(value = "学生年级",dataType = "Grade",required = true,notes = "学生年纪从-1到6",allowableValues = "0,1,2,3,4,5,6,-1")
+    @ApiModelProperty(value = "学生年级", dataType = "Grade", required = true, notes = "学生年纪从-1到6", allowableValues = "0,1,2,3,4,5,6,-1")
     private Grade grade;
 
     public Student() {

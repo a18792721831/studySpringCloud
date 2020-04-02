@@ -6,21 +6,21 @@
     <title>401 Page</title>
 </head>
 <body>
+<div>
     <div>
-        <div>
-            <h2>权限不够</h2>
-        </div>
-        <div sec:authorize="isAuthenticated()">
-            <p>已有用户登录</p>
-            <p>用户:<span sec:authentication="name" /></p>
-            <p>角色:<span sec:authentication="principal.authorities"/></p>
-        </div>
-        <div sec:authorize="isAnonymous()">
-            <p>未有用户登录</p>
-        </div>
-        <p>
-            拒绝访问!
-        </p>
+        <h2>权限不够</h2>
     </div>
+    <div sec:authorize="isAuthenticated()">
+        <p>已有用户登录</p>
+        <p>用户:<span sec:authentication="name"/></p>
+        <p>角色:<span sec:authentication="principal.authorities"/></p>
+    </div>
+    <div sec:authorize="isAnonymous()">
+        <p>未有用户登录</p>
+    </div>
+    <p>
+        拒绝访问!
+    </p>
+</div>
 </body>
 </html>

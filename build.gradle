@@ -8,26 +8,28 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 this.subprojects {
-    maven{
-        url 'https://maven.aliyun.com/'
+    repositories{
+        maven {
+            url 'https://maven.aliyun.com/'
+        }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven {
+            url 'https://repo1.maven.org/maven2/'
+        }
+        mavenCentral()
     }
-    maven{
-        url 'http://maven.aliyun.com/nexus/content/groups/public/'
-    }
-    maven{
-        url 'https://repo1.maven.org/maven2/'
-    }
-    mavenCentral()
 }
 
 repositories {
-    maven{
+    maven {
         url 'https://maven.aliyun.com/'
     }
-    maven{
+    maven {
         url 'http://maven.aliyun.com/nexus/content/groups/public/'
     }
-    maven{
+    maven {
         url 'https://repo1.maven.org/maven2/'
     }
     mavenCentral()

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @Date 2020-02-26
  */
 @Repository
-@FeignClient(value = "EUREKA-CLIENT", configuration = FeignConfig.class,fallback = HystrixFeignHelloDaoError.class)
+@FeignClient(value = "EUREKA-CLIENT", configuration = FeignConfig.class, fallback = HystrixFeignHelloDaoError.class)
 public interface FeignHelloDao {
 
     @GetMapping("/hello/hello/{name}")

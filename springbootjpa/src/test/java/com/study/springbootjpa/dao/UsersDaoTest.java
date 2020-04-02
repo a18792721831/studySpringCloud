@@ -23,7 +23,7 @@ public class UsersDaoTest {
     private UserDao userDao;
 
     @Test
-    public void testFindUsersByUsernameAndStatus(){
+    public void testFindUsersByUsernameAndStatus() {
         Users users = new Users();
         String name = String.valueOf(new Random().nextLong());
         users.setUsername(name);

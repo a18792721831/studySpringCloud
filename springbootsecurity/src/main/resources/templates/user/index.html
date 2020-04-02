@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/css/main.css" th:href="@{/css/main.css}"/>
 </head>
 <body>
-    <div th:substituteby="index::logout"/>
-    <h1>这个界面是被保护界面,user角色可以访问</h1>
-    <p><a href="/index" th:href="@{/index}">返回首页</a> </p>
-    <p><a href="/admin" th:href="@{/admin/index}">去admin目录下的index</a> </p>
+<div th:substituteby="index::logout"/>
+<h1>这个界面是被保护界面,user角色可以访问</h1>
+<p><a href="/index" th:href="@{/index}">返回首页</a></p>
+<p><a href="/admin" th:href="@{/admin/index}">去admin目录下的index</a></p>
 </body>
 </html>

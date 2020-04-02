@@ -32,9 +32,9 @@ public class ErrorFilterSubscriber extends ZuulFilter {
 
     @Override
     public Object run() {
-        try{
+        try {
             RequestContext.getCurrentContext().getResponse().getOutputStream().write("ok : ErrorFilterSubscriber is ok! ".getBytes());
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.warning("exception : " + e.getMessage());
             return null;
         }

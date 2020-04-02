@@ -20,7 +20,7 @@ class HellospringbootApplicationTests {
     private static Logger logger;
 
     @BeforeAll
-    public static void init(){
+    public static void init() {
         logger = Logger.getLogger(HellospringbootApplicationTests.class.getName());
     }
 

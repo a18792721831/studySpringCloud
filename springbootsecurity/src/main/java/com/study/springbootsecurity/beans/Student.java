@@ -12,38 +12,38 @@ public class Student {
 
     private String like;
 
-    private Student(){
+    private Student() {
 
     }
 
-    public static Student getBuild(){
+    public static Student getBuild() {
         return new Student();
     }
 
-    public Student name(String name){
+    public Student name(String name) {
         this.name = name;
         return Student.this;
     }
 
-    public Student age(int age){
+    public Student age(int age) {
         this.age = age;
         return Student.this;
     }
 
-    public Student like(String like){
+    public Student like(String like) {
         this.like = like;
         return Student.this;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
-    public int getAge(){
+    public int getAge() {
         return this.age;
     }
 
-    public String getLike(){
+    public String getLike() {
         return this.like;
     }
 

@@ -24,16 +24,16 @@ public class StudentService {
     }
 
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN','ROLE_USER')")
-    public List<Student> getStudentList(){
+    public List<Student> getStudentList() {
         return studentList;
     }
 
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    public void deleteStudent(Student student){
+    public void deleteStudent(Student student) {
         Iterator<Student> iterator = studentList.iterator();
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             Student stu = iterator.next();
-            if (stu.getName().equals(student.getName())){
+            if (stu.getName().equals(student.getName())) {
                 iterator.remove();
             }
         }

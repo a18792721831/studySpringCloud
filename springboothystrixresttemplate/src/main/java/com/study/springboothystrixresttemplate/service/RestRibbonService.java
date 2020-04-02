@@ -20,20 +20,20 @@ public class RestRibbonService {
     private RestTemplate restTemplate;
 
     @HystrixCommand(fallbackMethod = "restHiError")
-    public String restHi(String name){
+    public String restHi(String name) {
         return restTemplate.getForObject("http://" + eurekaClient + "/hello/hi/" + name, String.class);
     }
 
-    public String restHiError(String name){
+    public String restHiError(String name) {
         return "this is restHiError, you have error response," + name;
     }
 
     @HystrixCommand(fallbackMethod = "restHelloError")
-    public String restHello(String name){
+    public String restHello(String name) {
         return restTemplate.getForObject("http://" + eurekaClient + "/hello/hello/" + name, String.class);
     }
 
-    public String restHelloError(String name){
+    public String restHelloError(String name) {
         return "this is restHelloError, you have error response," + name;
     }
 }

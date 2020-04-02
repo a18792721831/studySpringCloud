@@ -20,7 +20,7 @@ public class UsersServiceTest {
     private UserService userService;
 
     @Test
-    public void testAddUser(){
+    public void testAddUser() {
         Users users = new Users();
         users.setUsername(String.valueOf(new Random().nextLong()));
         users.setPassword(String.valueOf(new Random().nextLong()));
@@ -29,7 +29,7 @@ public class UsersServiceTest {
     }
 
     @Test
-    public void testBatchAddUser(){
+    public void testBatchAddUser() {
         Users users = new Users();
         users.setUsername(String.valueOf(new Random().nextLong()));
         users.setPassword(String.valueOf(new Random().nextLong()));

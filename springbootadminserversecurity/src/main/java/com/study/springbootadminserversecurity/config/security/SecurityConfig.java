@@ -49,7 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser(userName).password("{noop}"+password).roles(role);
+        auth.inMemoryAuthentication().withUser(userName).password("{noop}" + password).roles(role);
     }
 
 }

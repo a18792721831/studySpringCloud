@@ -1,0 +1,57 @@
+server:
+  port: 8602
+
+users:
+  zipkin:
+    hostname: 10.0.251.180
+    port: 9412
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestMappingHandlerMapping: trace
+
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  application:
+    name: service-config
+  profiles:
+    active: dev
+  cloud:
+    inetutils:
+      timeout-seconds: 180
+    config:
+      server:
+        git:
+          uri: https://github.com/a18792721831/studySpringCloud # 仓库跟地址
+          search-paths: service-config-file # 以studySpringCloud为根路径进行搜索的文件夹地址
+          username: a18792721831 # 用户名
+          password: # 公有仓库可以不写密码
+          timeout: 180
+          forcePull: true
+          cloneOnStart: true
+      label: master # 指定分支
+  rabbitmq:
+    host: 10.0.228.93
+    port: 30672
+    username: guest
+    password: guest
+  zipkin:
+    base-url: http://${users.zipkin.hostname}:${users.zipkin.port}/
+    sleuth:
+      sampler:
+        percentage: 1.0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

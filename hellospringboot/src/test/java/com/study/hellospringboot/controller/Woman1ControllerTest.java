@@ -23,13 +23,13 @@ public class Woman1ControllerTest extends AbstractTest {
     private Woman1 woman1;
 
     @BeforeAll
-    public static void init(){
+    public static void init() {
         AbstractTest.init();
         logger = Logger.getLogger(Woman1ControllerTest.class.getName());
     }
 
     @BeforeEach
-    public void beforeTest(){
+    public void beforeTest() {
         super.beforeTest();
         url += "/woman1";
     }

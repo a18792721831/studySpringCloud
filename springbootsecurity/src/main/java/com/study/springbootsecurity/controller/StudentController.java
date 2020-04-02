@@ -22,12 +22,12 @@ public class StudentController {
     private StudentService studentService;
 
     @GetMapping("/list")
-    public List<Student> list(){
+    public List<Student> list() {
         return studentService.getStudentList();
     }
 
     @RequestMapping("/delete/{name}")
-    public void deleteStudent(@PathVariable("name") String name){
+    public void deleteStudent(@PathVariable("name") String name) {
         List<Student> studentList = studentService.getStudentList();
         studentList.stream().filter(s -> name.equals(s.getName())).forEach(stu -> studentService.deleteStudent(stu));
     }

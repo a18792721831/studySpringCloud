@@ -17,12 +17,12 @@ public class StudentService {
     @Autowired
     private StudentDao studentDao;
 
-    public Student addStudent(Student student){
+    public Student addStudent(Student student) {
         studentDao.save(student);
         return student;
     }
 
-    public Optional<Student> findStudentById(Long id){
+    public Optional<Student> findStudentById(Long id) {
         return studentDao.findById(id);
     }
 }

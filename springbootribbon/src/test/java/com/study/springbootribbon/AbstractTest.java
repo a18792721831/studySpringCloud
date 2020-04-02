@@ -34,12 +34,12 @@ public abstract class AbstractTest {
     protected TestRestTemplate testRestTemplate;
 
     @BeforeAll
-    protected static void init(){
+    protected static void init() {
 
     }
 
     @BeforeEach
-    public void beforeTest(){
+    public void beforeTest() {
         url = baseUrl + ":" + port;
     }
 }

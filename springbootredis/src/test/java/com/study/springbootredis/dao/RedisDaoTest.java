@@ -22,13 +22,13 @@ public class RedisDaoTest {
     private RedisDao redisDao;
 
     @Test
-    public void testAdd(){
+    public void testAdd() {
         redisDao.setKey("hi", "hello");
         logger.warning(" test add success");
     }
 
     @Test
-    public void testGet(){
+    public void testGet() {
         String value = redisDao.getValue("hi");
         assertThat(value, equalTo("hello"));
         logger.warning(" test add success value = " + value);

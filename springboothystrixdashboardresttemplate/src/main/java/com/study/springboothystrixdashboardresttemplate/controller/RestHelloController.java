@@ -26,12 +26,12 @@ public class RestHelloController {
     }
 
     @GetMapping("/hi/{name}")
-    public String restHi(@PathVariable("name") String name){
+    public String restHi(@PathVariable("name") String name) {
         return restRibbonService.restHi(name);
     }
 
     @GetMapping("/hello/{name}")
-    public String restHello(@PathVariable("name") String name){
+    public String restHello(@PathVariable("name") String name) {
         return restRibbonService.restHello(name);
     }
 

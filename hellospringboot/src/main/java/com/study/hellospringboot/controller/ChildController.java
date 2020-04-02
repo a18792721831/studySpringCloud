@@ -21,7 +21,7 @@ public class ChildController extends AbController {
     }
 
     @RequestMapping("")
-    public Child readChild(){
+    public Child readChild() {
         return child;
     }
 
@@ -31,17 +31,17 @@ public class ChildController extends AbController {
     }
 
     @RequestMapping("/name")
-    public String readChildName(){
+    public String readChildName() {
         return super.readName();
     }
 
     @RequestMapping("/age")
-    public int readChildAge(){
+    public int readChildAge() {
         return super.readAge();
     }
 
     @RequestMapping("/value")
-    public String readChildValue(){
+    public String readChildValue() {
         return super.readValue();
     }
 }
