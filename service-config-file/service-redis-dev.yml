@@ -1,7 +1,7 @@
 spring:
   redis:
     host: 10.0.251.180
-    port: 32777
+    port: 30379
     password:
     database: 1
     pool:
