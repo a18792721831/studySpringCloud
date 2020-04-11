@@ -1,5 +1,6 @@
 package com.study.servicesubscriber;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -13,7 +14,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableHystrix
 @EnableFeignClients
 @EnableHystrixDashboard
-@EntityScan("com.study.servicedomain.beans")
+@EntityScan(basePackages = "com.study.servicedomain.beans")
+@MapperScan(basePackages = "com.study.servicesubscriber.dao.mybatis")
 public class ServiceSubscriberApplication {
 
     public static void main(String[] args) {

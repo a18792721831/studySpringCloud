@@ -24,6 +24,7 @@ ext {
     set('springCloudVersion', "Hoxton.SR3")
     set('swaggerVersion','2.6.1')
     set('oracleI18nVersion','12.1.0.2.0')
+    set('mybatisVersion', '2.1.2')
 }
 
 dependencies {
@@ -44,6 +45,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
     implementation "io.springfox:springfox-swagger2:${swaggerVersion}"
     implementation "io.springfox:springfox-swagger-ui:${swaggerVersion}"
+    implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatisVersion}"
     compile project (':service-domain')
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.oracle.ojdbc:ojdbc8'

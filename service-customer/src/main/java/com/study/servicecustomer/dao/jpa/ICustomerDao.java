@@ -1,4 +1,4 @@
-package com.study.servicecustomer.dao;
+package com.study.servicecustomer.dao.jpa;
 
 import com.study.servicedomain.beans.Customer;
 import com.study.servicedomain.neum.Status;

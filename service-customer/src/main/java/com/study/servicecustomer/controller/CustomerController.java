@@ -1,6 +1,8 @@
 package com.study.servicecustomer.controller;
 
+import com.study.servicecustomer.dao.redis.IRedisDao;
 import com.study.servicecustomer.service.ICustomerService;
+import com.study.servicecustomer.service.IMybatisPeopleService;
 import com.study.servicecustomer.service.feign.PeopleFeignService;
 import com.study.servicedomain.beans.dto.CustomerDto;
 import com.study.servicedomain.beans.dto.PeopleDto;
@@ -31,6 +33,12 @@ public class CustomerController {
 
     @Autowired
     private PeopleFeignService peopleFeignService;
+
+    @Autowired
+    private IRedisDao redisDao;
+
+    @Autowired
+    private IMybatisPeopleService mybatisPeopleService;
 
     @PostMapping("/{code}/{name}/{address}")
     @ApiOperation(value = "增加Customer", notes = "post 方法增加一个客户")
@@ -196,5 +204,38 @@ public class CustomerController {
     public String deletePeopleByName(@PathVariable("name") String name) {
         peopleFeignService.deletePeopleByName(name);
         return " delete people by name success ,from " + applicationName + ":" + port + " !";
+    }
+
+
+    @PostMapping("/redis/{key}/{value}")
+    @ApiOperation(value = "redis 将<key,value>放入redis", notes = "根据<key,value>存入 redis ")
+    @ApiImplicitParams({@ApiImplicitParam(name = "key", value = " 键值对的键 ", required = true, dataType = "String",
+            paramType = "path"), @ApiImplicitParam(name = "value", value = " 键值对的值 ", required = true, dataType = "String",
+            paramType = "path")})
+    @ApiResponses({@ApiResponse(code = 200, message = "return add redis string success , <key,value>!"),
+            @ApiResponse(code = 404, message = "renturn error message")})
+    public String addRedisString(@PathVariable("key") String key, @PathVariable("value") String value) {
+        redisDao.setKey(key, value);
+        return " add redis string success , " + key + ":" + value + " !";
+    }
+
+    @GetMapping("/redis/{key}")
+    @ApiOperation(value = "redis 根据key取数据", notes = "redis根据key取数据")
+    @ApiImplicitParams({@ApiImplicitParam(name = "key", value = "redis 里面的key", required = true,
+            dataType = "String", paramType = "path")})
+    @ApiResponses({@ApiResponse(code = 200, message = " return the key of value for redis ."),
+            @ApiResponse(code = 404, message = "return error messages")})
+    public String getRedisString(@PathVariable("key") String key) {
+        return redisDao.getValue(key);
+    }
+
+    @GetMapping("/mybatis/people/{name}")
+    @ApiOperation(value = " 根据名字获取People MyBatis 方式", notes = "使用MyBatis方式根据名字查询People")
+    @ApiImplicitParams({@ApiImplicitParam(name = "name", value = "People 的名字", required = true, dataType = "String",
+            paramType = "path")})
+    @ApiResponses({@ApiResponse(code = 200, message = "return List<PeopleDto> for name's People used MyBatis"),
+            @ApiResponse(code = 404, message = "return error message for 404")})
+    public List<PeopleDto> findPeopleByName(@PathVariable("name") String name) {
+        return mybatisPeopleService.findPeopleByName(name);
     }
 }

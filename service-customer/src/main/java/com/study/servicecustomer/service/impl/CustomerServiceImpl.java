@@ -1,6 +1,6 @@
 package com.study.servicecustomer.service.impl;
 
-import com.study.servicecustomer.dao.ICustomerDao;
+import com.study.servicecustomer.dao.jpa.ICustomerDao;
 import com.study.servicecustomer.service.ICustomerService;
 import com.study.servicedomain.beans.Customer;
 import com.study.servicedomain.beans.dto.CustomerDto;

@@ -27,6 +27,14 @@ spring:
     prefer-file-system-access: false
   application:
     name: admin-client
+  boot:
+    admin:
+      client:
+        period: 60000 # 每60秒 admin client 向 admin server发送心跳
+        read-timeout: 60000 # 心跳注册超时时间
+        connect-timeout: 60000 # 注册连接超时
+        auto-registration: true # 开启自动注册
+
 management:
   security:
     enabled: false
