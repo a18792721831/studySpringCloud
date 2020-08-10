@@ -15,7 +15,7 @@ public class HelloProducer {
     private AmqpTemplate rabbitAmqpTemplate;
 
 
-    public void test(){
-        rabbitAmqpTemplate.send();
-    }
+//    public void test(){
+//        rabbitAmqpTemplate.send();
+//    }
 }
